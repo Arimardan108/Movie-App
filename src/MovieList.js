@@ -5,6 +5,8 @@ class MovieList extends Component {
     return (
       <>
         <MovieCard />
+        <MovieCard />
+        <MovieCard />
       </>
     );
   }
