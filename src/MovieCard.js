@@ -49,9 +49,10 @@ class MovieCard extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     //Destructing the state object in render function
     const { title, plot, poster, price, rating, star, fav, isInCart } =
-      this.props;
+      this.props.movies;
 
     return (
       <div className="main">
