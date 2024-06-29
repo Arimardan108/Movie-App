@@ -33,7 +33,7 @@ class MovieList extends Component {
           plot: "When the menace known as the joker wreaks havoc and chos on the people of Gotham.",
           poster:
             "https://m.media-amazon.com/images/I/91z1aHBN4tS._SL1500_.jpg",
-          rating: "8.0",
+          rating: "9.0",
           price: 299,
           star: 0,
           fav: false,
