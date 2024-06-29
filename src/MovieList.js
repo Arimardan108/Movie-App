@@ -34,7 +34,7 @@ class MovieList extends Component {
           poster:
             "https://m.media-amazon.com/images/I/91z1aHBN4tS._SL1500_.jpg",
           rating: "8.0",
-          price: 199,
+          price: 299,
           star: 0,
           fav: false,
           isInCart: false,
