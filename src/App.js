@@ -1,11 +1,11 @@
-import MovieCard from "./MovieCard";
+import MovieList from "./MovieList";
 
-export default function App(){
-  return(
+function App() {
+  return (
     <>
-    <h1>Movie App</h1>
-    <MovieCard />
+      <h1>Movie App</h1>
+      <MovieList />
     </>
-
-  )
+  );
 }
+export default App;
