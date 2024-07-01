@@ -1,25 +1,6 @@
 import { Component } from "react";
 
 class MovieCard extends Component {
-  constructor() {
-    super();
-    //Creating the state object
-    this.state = {
-      title: "The Avengers",
-      plot: "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
-      rating: "8.0",
-      price: 199,
-      star: 0,
-      fav: false,
-      isInCart: false,
-    };
-
-    //Binding the event handler in the constructor if event handler is not an arrow function
-    // this.addStars = this.addStars.bind(this)
-  }
-
   //Creating an arrow function for addStars which automatically binds to the current instance
   addStars = () => {
     //Condition to stop the stars from increasing beyond 5
@@ -68,9 +49,11 @@ class MovieCard extends Component {
   };
 
   render() {
+    console.log(this.props);
+
     //Destructing the state object in render function
-    const { title, plot, poster, price, rating, star, fav, isInCart } =
-      this.state;
+    const { title, plot, price, rating, star, fav, isInCart } =
+      this.props.movies;
 
     return (
       <div className="main">
