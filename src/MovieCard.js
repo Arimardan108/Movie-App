@@ -78,7 +78,12 @@ class MovieCard extends Component {
         <div className="movie-card">
           {/**Left section of Movie Card */}
           <div className="left">
-            <img alt="poster" src={poster} />
+            <img
+              alt="poster"
+              src={
+                "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+              }
+            />
           </div>
 
           {/**Right section Movie Card */}
