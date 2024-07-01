@@ -1,6 +1,6 @@
 import MovieList from "./MovieList";
 
-function App() {
+export default function App() {
   return (
     <>
       <h1>Movie App</h1>
@@ -8,4 +8,3 @@ function App() {
     </>
   );
 }
-export default App;
