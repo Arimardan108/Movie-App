@@ -1,6 +1,6 @@
-import { Component } from "react";
+import React from "react";
 
-class MovieCard extends Component {
+class MovieCard extends React.Component {
   //Creating an arrow function for addStars which automatically binds to the current instance
   addStars = () => {
     //Condition to stop the stars from increasing beyond 5
@@ -50,9 +50,8 @@ class MovieCard extends Component {
 
   render() {
     console.log(this.props);
-
     //Destructing the state object in render function
-    const { title, plot, price, rating, star, fav, isInCart } =
+    const { title, plot, poster, price, rating, star, fav, isInCart } =
       this.props.movies;
 
     return (
@@ -61,12 +60,7 @@ class MovieCard extends Component {
         <div className="movie-card">
           {/**Left section of Movie Card */}
           <div className="left">
-            <img
-              alt="poster"
-              src={
-                "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-              }
-            />
+            <img alt="poster" src={poster} />
           </div>
 
           {/**Right section Movie Card */}
