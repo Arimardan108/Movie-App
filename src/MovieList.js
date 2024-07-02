@@ -47,12 +47,11 @@ class MovieList extends Component {
     // this.addStars = this.addStars.bind(this)
   }
   render() {
+    const { movies } = this.state;
     // const { title, plot, price, rating, stars, fav, isIncart,poster } = this.state.movies;
     return (
       <>
-        {movies.map((movies) => (
-          <MovieCard movies={movies} />
-        ))}
+        {movies.map((movie) => <MovieCard movies= {movies} />)}
       </>
     );
   }
