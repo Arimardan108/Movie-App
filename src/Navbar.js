@@ -3,7 +3,13 @@ class Navbar extends React.Component {
   render() {
     return (
       <>
-        <h1>Movie App</h1>
+        <div>
+          <div>Title</div>
+          <div>
+            <img alt="Cart Icon" />
+            <span>0</span>
+          </div>
+        </div>
       </>
     );
   }
