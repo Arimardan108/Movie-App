@@ -4,7 +4,7 @@ class Navbar extends React.Component {
     return (
       <>
         <div style={styles.nav}>
-          <div className="title">Movie-App</div>
+          <div style={styles.title}>Movie-App</div>
           <div>
             <img alt="Cart Icon" />
             <span>3</span>
@@ -20,8 +20,16 @@ const styles = {
   nav: {
     width: "100%",
     height: 70,
-    background: "blue",
+    background: "red",
     display: "flex",
     justifyContent: " space-between",
+  },
+  title: {
+    fontSize: 38,
+    color: "#fff",
+    fontWeight: 600,
+    fontFamily: '"Montserrat",sans-ser',
+    textTransform: "uppercase",
+    marginLeft: 20,
   },
 };
