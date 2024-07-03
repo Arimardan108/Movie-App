@@ -5,9 +5,9 @@ class Navbar extends React.Component {
       <>
         <div style={styles.nav}>
           <div style={styles.title}>Movie-App</div>
-          <div>
-            <img alt="Cart Icon" />
-            <span>3</span>
+          <div style={styles.cartContainer}>
+            <img style={styles.cartIcon} src="" alt="Cart Icon" />
+            <span style={styles.cartCount}>3</span>
           </div>
         </div>
       </>
@@ -32,4 +32,7 @@ const styles = {
     textTransform: "uppercase",
     marginLeft: 20,
   },
+  cartContainer: {},
+  cartIcon: {},
+  cartCount: {},
 };
