@@ -3,15 +3,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <>
-        <div
-          style={{
-            width: "100% ",
-            height: 70,
-            background: "blue",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="nav">
           <div className="title">Movie-App</div>
           <div>
             <img alt="Cart Icon" />
