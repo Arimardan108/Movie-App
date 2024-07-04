@@ -16,6 +16,9 @@ const Title = styled.div`
   font-family: Montserrat, sans-ser;
   text-transform: uppercase;
   margin-left: 20;
+  &:hover {
+    color: cyan;
+  }
 `;
 const CartIconContainer = styled.div`
   position: relative;
@@ -33,6 +36,7 @@ const CartCount = styled.div`
   right: 10px;
   top: -5px;
   font-size: 12px;
+  visibility: ${(props) => (props.show ? "visible" : "hidden")};
 `;
 class Navbar extends React.Component {
   render() {
@@ -45,7 +49,9 @@ class Navbar extends React.Component {
               src="https://cdn-icons-png.flaticon.com/128/3144/3144456.png"
               alt="Cart Icon"
             />
-            <CartCount color="yellow">3</CartCount>
+            <CartCount color="yellow" show={false}>
+              3
+            </CartCount>
           </CartIconContainer>
         </Nav>
       </>
@@ -54,38 +60,38 @@ class Navbar extends React.Component {
 }
 export default Navbar;
 
-const styles = {
-  nav: {
-    width: "100%",
-    height: 70,
-    background: "red",
-    display: "flex",
-    justifyContent: " space-between",
-    position: "relative",
-  },
-  title: {
-    fontSize: 38,
-    color: "#fff",
-    fontWeight: 600,
-    fontFamily: '"Montserrat",sans-ser',
-    textTransform: "uppercase",
-    marginLeft: 20,
-  },
-  cartContainer: {
-    position: "relative",
-    cursor: "pointer",
-  },
-  cartIcon: {
-    height: 48,
-    marginRight: 20,
-  },
-  cartCount: {
-    background: "orange",
-    borderRadius: "50%",
-    padding: "4px 8px",
-    position: "absolute",
-    right: 10,
-    top: -5,
-    fontSize: 12,
-  },
-};
+// const styles = {
+//   nav: {
+//     width: "100%",
+//     height: 70,
+//     background: "red",
+//     display: "flex",
+//     justifyContent: " space-between",
+//     position: "relative",
+//   },
+//   title: {
+//     fontSize: 38,
+//     color: "#fff",
+//     fontWeight: 600,
+//     fontFamily: '"Montserrat",sans-ser',
+//     textTransform: "uppercase",
+//     marginLeft: 20,
+//   },
+//   cartContainer: {
+//     position: "relative",
+//     cursor: "pointer",
+//   },
+//   cartIcon: {
+//     height: 48,
+//     marginRight: 20,
+//   },
+//   cartCount: {
+//     background: "orange",
+//     borderRadius: "50%",
+//     padding: "4px 8px",
+//     position: "absolute",
+//     right: 10,
+//     top: -5,
+//     fontSize: 12,
+//   },
+// };
