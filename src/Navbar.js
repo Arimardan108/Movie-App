@@ -17,7 +17,7 @@ const Title = styled.div`
   text-transform: uppercase;
   margin-left: 20;
   &:hover {
-    color: #0ff0;
+    color: cyan;
   }
 `;
 const CartIconContainer = styled.div`
