@@ -1,7 +1,7 @@
 import React from "react";
 import MovieList from "./MovieList";
 import Navbar from "./Navbar";
-import movies from "./moviesData";
+import {movies} from "./moviesData";
 import "./styles.css";
 class App extends React.Component {
   constructor() {
