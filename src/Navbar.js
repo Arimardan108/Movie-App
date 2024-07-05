@@ -60,38 +60,38 @@ class Navbar extends React.Component {
 }
 export default Navbar;
 
-const styles = {
-  nav: {
-    width: "100%",
-    height: 70,
-    background: "red",
-    display: "flex",
-    justifyContent: " space-between",
-    position: "relative",
-  },
-  title: {
-    fontSize: 38,
-    color: "#fff",
-    fontWeight: 600,
-    fontFamily: '"Montserrat",sans-ser',
-    textTransform: "uppercase",
-    marginLeft: 20,
-  },
-  cartContainer: {
-    position: "relative",
-    cursor: "pointer",
-  },
-  cartIcon: {
-    height: 48,
-    marginRight: 20,
-  },
-  cartCount: {
-    background: "orange",
-    borderRadius: "50%",
-    padding: "4px 8px",
-    position: "absolute",
-    right: 10,
-    top: -5,
-    fontSize: 12,
-  },
-};
+// const styles = {
+//   nav: {
+//     width: "100%",
+//     height: 70,
+//     background: "red",
+//     display: "flex",
+//     justifyContent: " space-between",
+//     position: "relative",
+//   },
+//   title: {
+//     fontSize: 38,
+//     color: "#fff",
+//     fontWeight: 600,
+//     fontFamily: '"Montserrat",sans-ser',
+//     textTransform: "uppercase",
+//     marginLeft: 20,
+//   },
+//   cartContainer: {
+//     position: "relative",
+//     cursor: "pointer",
+//   },
+//   cartIcon: {
+//     height: 48,
+//     marginRight: 20,
+//   },
+//   cartCount: {
+//     background: "orange",
+//     borderRadius: "50%",
+//     padding: "4px 8px",
+//     position: "absolute",
+//     right: 10,
+//     top: -5,
+//     fontSize: 12,
+//   },
+// };
