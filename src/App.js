@@ -1,7 +1,7 @@
 import React from "react";
 import MovieList from "./MovieList";
 import Navbar from "./Navbar";
-import (movies) from "./moviesData"
+import movies from "./moviesData";
 import "./styles.css";
 class App extends React.Component {
   constructor() {
@@ -62,15 +62,16 @@ class App extends React.Component {
   };
 
   render() {
-    const {movies}=this.state;
+    const { movies } = this.state;
     return (
       <>
         <Navbar />
-        <MovieList movies={movies}
-        addStars={this.handleAddStars}
-        decStars={this.handleDecStars}
-        toggleFav={this.handleToggleFav}
-        toggleCart={this.handleAddtocart}
+        <MovieList
+          movies={movies}
+          addStars={this.handleAddStars}
+          decStars={this.handleDecStars}
+          toggleFav={this.handleToggleFav}
+          toggleCart={this.handleAddtocart}
         />
       </>
     );
