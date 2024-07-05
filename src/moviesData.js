@@ -9,6 +9,7 @@ export const movies = [
     price: 99,
     stars: 0,
     fav: false,
+
     isInCart: false,
   },
   {
