@@ -1,15 +1,15 @@
-import React from "react";
 import MovieList from "./MovieList";
 import Navbar from "./Navbar";
-import {movies} from "./moviesData";
-import "./styles.css";
-class App extends React.Component {
+import { movies } from "./moviesData";
+import React from "react";
+
+export default class App extends React.Component {
   constructor() {
     super();
     //Creating the state object
     this.state = {
       movies: movies,
-      carCount: 0,
+      cartCount: 0,
     };
   }
 
@@ -68,14 +68,12 @@ class App extends React.Component {
         <Navbar />
         <MovieList
           movies={movies}
-          addStars={this.handleAddStars}
-          decStars={this.handleDecStars}
-          toggleFav={this.handleToggleFav}
-          toggleCart={this.handleAddtocart}
+          onIncStars={this.handleAddStars}
+          onDecStars={this.handleDecStars}
+          onClickFav={this.handleToggleFav}
+          onClickAddtocart={this.handleAddtocart}
         />
       </>
     );
   }
 }
-
-export default App;
