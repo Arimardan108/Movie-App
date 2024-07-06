@@ -1,15 +1,15 @@
-import React from "react";
 import MovieList from "./MovieList";
 import Navbar from "./Navbar";
 import { movies } from "./moviesData";
-import "./styles.css";
-class App extends React.Component {
+import React from "react";
+
+export default class App extends React.Component {
   constructor() {
     super();
     //Creating the state object
     this.state = {
       movies: movies,
-      carCount: 0,
+      cartCount: 0,
     };
   }
 
@@ -51,31 +51,36 @@ class App extends React.Component {
   };
 
   handleAddtocart = (movie) => {
-    const { movies } = this.state;
+    let { movies, cartCount } = this.state;
     const movieId = movies.indexOf(movie);
 
     movies[movieId].isInCart = !movies[movieId].isInCart;
 
+    if (movies[movieId].isInCart) {
+      cartCount = cartCount + 1;
+    } else {
+      cartCount = cartCount - 1;
+    }
+
     this.setState({
       movies,
+      cartCount,
     });
   };
 
   render() {
-    const { movies } = this.state;
+    const { movies, cartCount } = this.state;
     return (
       <>
-        <Navbar />
+        <Navbar cartCount={cartCount} />
         <MovieList
           movies={movies}
-          addStars={this.handleAddStars}
-          decStars={this.handleDecStars}
-          toggleFav={this.handleToggleFav}
-          toggleCart={this.handleAddtocart}
+          onIncStars={this.handleAddStars}
+          onDecStars={this.handleDecStars}
+          onClickFav={this.handleToggleFav}
+          onClickAddtocart={this.handleAddtocart}
         />
       </>
     );
   }
 }
-
-export default App;
