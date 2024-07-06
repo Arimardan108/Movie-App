@@ -1,24 +1,24 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-class MovieList extends React.Component {
-  render() {
-    const { movies, addStars, decStars, toggleFav, toggleCart } = this.props;
-    console.log(this.props);
-    return (
-      <>
-        {movies.map((movie, index) => (
-          <MovieCard
-            movies={movie}
-            addStars={addStars}
-            decStars={decStars}
-            toggleFav={toggleFav}
-            toggleCart={toggleCart}
-            key={index}
-          />
-        ))}
-      </>
-    );
-  }
+
+function MovieList(props) {
+  const { movies, onIncStars, onDecStars, onClickFav, onClickAddtocart } =
+    props;
+
+  return (
+    <div className="main">
+      {movies.map((movie, index) => (
+        <MovieCard
+          movies={movie}
+          key={index}
+          onIncStars={onIncStars}
+          onDecStars={onDecStars}
+          onClickFav={onClickFav}
+          onClickAddtocart={onClickAddtocart}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default MovieList;
