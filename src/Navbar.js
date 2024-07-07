@@ -1,10 +1,27 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
+const Nav = styled.div`
+  width: 100%;
+  height: 70px;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Title = styled.div`
+  font-size: 30;
+  color: #fff;
+  font-weight: 600;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  margin-left: 20;
+`;
 class Navbar extends Component {
   render() {
     return (
-      <div style={styles.nav}>
-        <div style={styles.title}>Movie-App</div>
+      <Nav>
+        <Title>Movie-App</Title>
         <div style={styles.cartContainer}>
           <img
             src="https://cdn-icons-png.flaticon.com/128/891/891462.png"
@@ -13,7 +30,7 @@ class Navbar extends Component {
           />
           <span style={styles.cartCount}>3</span>
         </div>
-      </div>
+      </Nav>
     );
   }
 }
