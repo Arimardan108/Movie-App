@@ -1,5 +1,3 @@
-import React from "react";
-
 function MovieCard(props) {
   const { movies, onIncStars, onClickFav, onClickAddtocart, onDecStars } =
     props;
